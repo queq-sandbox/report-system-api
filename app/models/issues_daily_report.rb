@@ -1,0 +1,2 @@
+class IssuesDailyReport < ApplicationRecord
+end

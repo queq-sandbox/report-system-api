@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_19_033737) do
+ActiveRecord::Schema.define(version: 2018_09_19_034835) do
 
   create_table "daily_reports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "emoticon", null: false
@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(version: 2018_09_19_033737) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_issues_on_name", unique: true
+  end
+
+  create_table "issues_daily_reports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "issue_id"
+    t.bigint "daily_report_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["daily_report_id"], name: "index_issues_daily_reports_on_daily_report_id"
+    t.index ["issue_id"], name: "index_issues_daily_reports_on_issue_id"
   end
 
   create_table "teams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
