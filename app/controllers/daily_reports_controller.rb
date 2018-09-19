@@ -32,7 +32,6 @@ class DailyReportsController < ApplicationController
   private
 
     def daily_report_params
-      binding.pry
       params.require(:daily_report).permit(:emoticon, :achivement, :plan, :description, :user_id, :team_id)
     end
 
