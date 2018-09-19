@@ -1,4 +1,4 @@
-require_relative 'boot'
+require_relative "boot"
 
 require "rails"
 # Pick the frameworks you want:
@@ -29,8 +29,8 @@ module ReportSystemApi
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'localhost:8080'
-        resource '*', :headers => :any, :methods => [:get, :post, :put, :delete, :options]
+        origins "localhost:8080"
+        resource "*", headers: :any, methods: [:get, :post, :put, :delete, :options]
       end
     end
 

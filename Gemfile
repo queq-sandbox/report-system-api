@@ -34,6 +34,7 @@ group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "rubocop"
   gem "rubocop-rails_config"
+  gem "pry-rails"
 end
 
 group :development do
