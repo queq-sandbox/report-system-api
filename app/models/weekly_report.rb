@@ -1,0 +1,2 @@
+class WeeklyReport < ApplicationRecord
+end
