@@ -10,4 +10,9 @@ class User < ActiveRecord::Base
   belongs_to :team
   belongs_to :group
   has_many :daily_reports
+
+  validates :role,
+            :first_name,
+            :family_name,
+            presence: true
 end
