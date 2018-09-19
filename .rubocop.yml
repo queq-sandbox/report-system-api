@@ -1,0 +1,17 @@
+AllCops:
+  Exclude:
+    - "public/**/*"
+    - "tmp/**/*"
+    - "log/**/*"
+    - "config/**/*"
+    - "db/**/*"
+
+inherit_gem:
+  rubocop-rails_config:
+    - config/rails.yml
+
+Rails:
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
