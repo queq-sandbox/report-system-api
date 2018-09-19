@@ -40,6 +40,12 @@ $ rails db:migrate
 $ rails s
 ```
 
+## how to send requests from client
+
+1. Register user by "POST (app domain)/auth"(body: {email: "your email", password: "your password"})
+2. API return auth-token, client, uid
+3. When requsting auth needed API, set auth-token, client, uid in request headers
+
 ## License
 
 This project is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
