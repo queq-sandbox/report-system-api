@@ -3,7 +3,6 @@ AllCops:
     - "public/**/*"
     - "tmp/**/*"
     - "log/**/*"
-    - "config/**/*"
     - "db/**/*"
 
 inherit_gem:

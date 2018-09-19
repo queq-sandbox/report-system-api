@@ -42,6 +42,7 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[5.2]
       t.string :email, null: false
       t.string :phone
       t.string :position
+      t.integer :role, null: false
 
       ## Tokens
       t.text :tokens
