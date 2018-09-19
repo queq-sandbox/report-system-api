@@ -4,7 +4,7 @@ class DailyReport < ApplicationRecord
   has_many :issues, through: :issues_daily_reports
   has_many :issues_daily_reports
 
-  vaidates :emoticon,
+  validates :emoticon,
            :achivement,
            :plan,
            :description,
