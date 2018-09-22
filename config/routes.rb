@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   scope "teams/:team_id", as: :team do
     resources :daily_reports, module: :teams, only: :index
     resources :weekly_reports, module: :teams, only: :index
+    resources :users, module: :teams, only: :index
   end
 end
