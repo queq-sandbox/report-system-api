@@ -10,4 +10,8 @@ Rails.application.routes.draw do
     resources :weekly_reports, module: :teams, only: :index
     resources :users, module: :teams, only: :index
   end
+
+  scope "users/:user_id", as: :user do
+    resources :daily_reports, module: :users, only: :index
+  end
 end
